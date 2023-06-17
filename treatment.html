@@ -1,31 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Treatment</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
-<script src="http://www.w3schools.com/lib/w3data.js"></script>
-</head>
-<body>
-<div w3-include-html="templates/header.html"></div>
-
-<main>    
-    <div w3-include-html="templates/distribucion3.html"></div>
-    <div class="grid">
-        <div w3-include-html="templates/card.html"></div>
-        <div w3-include-html="templates/card.html"></div>
-        <div w3-include-html="templates/card.html"></div>   
-    </div>
-    
-    
-</main>
-
-<div w3-include-html="templates/footer.html"></div>
-    
-
-<script>
-    w3IncludeHTML();
-</script>
-
-</body>
+<html lang="es-ES">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Treatment</title>
+        <script src="javaScript_Dynamic/DynamicLoad_Common.js"></script>
+        <script defer src="javaScript_Dynamic/DynamicLoad_Treatment.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>    
+            <div id="header"></div>
+            <div id="title_page"></div>
+            <section id="distribu3"></section>
+            <section class="grid" id="cardsTreatment"></section>
+        </main>
+        <div id="footer"></div>
+    </body>
 </html>

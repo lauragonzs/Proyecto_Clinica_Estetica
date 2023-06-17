@@ -1,44 +1,39 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Valoraciones</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
-<script src="http://www.w3schools.com/lib/w3data.js"></script>
-</head>
-<body>
-<div w3-include-html="templates/header.html"></div>
-
-<main>    
-    <div class="grid">
-        <div class="item1-r" w3-include-html="templates/review.html"></div>
-        <div class="item1-r" w3-include-html="templates/review.html"></div>
-        <div class="item1-r" w3-include-html="templates/review.html"></div>
-        <div class="item1-r" w3-include-html="templates/review.html"></div>
-        <div class="item1-r" w3-include-html="templates/review.html"></div>
-        <div class="item1-r" w3-include-html="templates/review.html"></div>
-        <div class="item1-r" w3-include-html="templates/review.html"></div>
-
-        <div class="item2_val-l">
-            <form class="formCont">
-                <h2>VALÓRANOS</h2>
-                <p>Nombre:<input placeholder="Escriba su nombre aquí.." required></input></p>
-                <p>Email:<input placeholder="Escriba su email aquí.." required></input></p>
-                <p>Puntuación del servicio:</p><p id="estrella_valoracion">★★★★★</p>
-                <p>Título de la valoración:<input placeholder="Escriba el título de su valoración..."></input></p>
-                <p>Valoración:<textarea placeholder="Escriba los motivos de la puntuación asignada al servicio..." required></textarea></input></p>
-                <button class="btn">Enviar</button>
-            </form>
-        </div>
-    </div>
-
-</main>
-
-<div w3-include-html="templates/footer.html"></div>
-
-<script>
-    w3IncludeHTML();
-</script>
-
-</body>
+<html lang="es-ES">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Valoraciones</title>
+        <script src="javaScript/formValidationReviews.js"></script>
+        <script src="javaScript_Dynamic/DynamicLoad_Common.js"></script>
+        <script defer src="javaScript_Dynamic/DynamicLoad_Reviews.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <div id="template_reseña_añadir"></div>
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="title_page"></div>
+        <main>
+            <div class="grid" id="reseñas">
+                <section class="item-col3-rowS7">
+                    <form class="formCont" name="form">
+                        <h2>VALÓRANOS</h2>
+                        <p>Nombre *</p>
+                        <input placeholder="Escriba su nombre aquí.." id="name_review" required>
+                        <p>Email *</p>
+                        <input type="email" id="email_review" placeholder="Escriba su email aquí.." pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$" required>
+                        <p>Puntuación del servicio *</p>
+                        <input type="number" class="valora" id="valoracion" min="0" max="5" placeholder="(0-5)" required>
+                        <p>Título de la valoración</p>
+                        <input placeholder="Escriba el título de su valoración...">
+                        <p>Valoración *</p>
+                        <textarea placeholder="Escriba los motivos de la puntuación asignada al servicio..." id="textareaReviews" required></textarea>
+                        <input type="submit" class="btn" id="send_review" value="Enviar">
+                    </form>
+                </section>
+            </div>
+        </main>
+        <div id="footer"></div>
+    </body>
 </html>

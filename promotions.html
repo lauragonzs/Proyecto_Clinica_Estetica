@@ -1,33 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Promotions</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
-<script src="http://www.w3schools.com/lib/w3data.js"></script>
-</head>
-<body>
-<div w3-include-html="templates/header.html"></div>
-
-<main>    
-    <div class="grid">
-        <div w3-include-html="templates/card.html"></div>
-        <div w3-include-html="templates/card.html"></div>
-        <div w3-include-html="templates/card.html"></div>
-        <div w3-include-html="templates/card.html"></div>
-        <div w3-include-html="templates/card.html"></div>
-        <div w3-include-html="templates/card.html"></div>   
-        <div w3-include-html="templates/card.html"></div>
-        <div w3-include-html="templates/card.html"></div>
-        <div w3-include-html="templates/card.html"></div>   
-    </div>
-</main>
-
-<div w3-include-html="templates/footer.html"></div>
-
-<script>
-    w3IncludeHTML();
-</script>
-
-</body>
+<html lang="es-ES">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Promotions</title>
+        <script src="javaScript_Dynamic/DynamicLoad_Common.js"></script>
+        <script src="javaScript_Dynamic/DynamicLoad_Promotions.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="title_page"></div>
+        <main>        
+            <section id="promotionCards" class="grid"></section>
+        </main>
+        <div id="footer"></div>
+    </body>
 </html>
